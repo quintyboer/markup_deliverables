@@ -1,0 +1,115 @@
+---
+title: "Diamonds"
+author:
+  - name: "Quinty Boer"
+    orcid: 0009-0001-7211-9372
+format:
+  revealjs:
+    slide-number: true
+    logo: "logo.png"
+    scrollable: true
+    multiplex: true
+    embed-resources: true
+    transition: fade
+    progress: false
+editor: source
+bibliography: bibliography.bib
+---
+
+## Diamonds are shiny ...
+
+![Diamond image from Unsplash [@Dan_2022]](daniel-dan-gUkgk1GIGdQ-unsplash.jpg){fig-align="center"}
+
+## ... and sparkly
+
+![Diamond gif from Tenor [@AnitaCruz2324_2025]](diamond.gif){fig-align="center"}
+
+## Let's look at the diamonds dataset from ggplot2
+
+```{r}
+library(ggplot2)
+data(diamonds)
+set.seed(42)
+diamonds_sample <- diamonds[sample(nrow(diamonds), 5000), c("carat", "cut", "depth", "x", "y", "z", "price")]
+
+library(DT)
+datatable(diamonds_sample, options = list(pageLength = 3), 
+          class = "compact", filter = "top", width = "95%")
+```
+
+## Histogram of diamond carat
+
+Size matters!
+
+::: columns
+
+::: {.column width="50%"}
+
+
+```{r cache=TRUE, label = histogram_10bins}
+ggplot(diamonds_sample, aes(x = carat)) +
+  geom_histogram(bins = 10, fill = "blue", color = "white") +
+  theme_minimal() +
+  theme(text = element_text(size = 30)) +
+  labs(title = "", x = "Carat", y = "Count")
+```
+
+A histogram of diamond weight (carat), using 10 bins.
+
+:::
+
+::: {.column width="50%"}
+
+```{r cache=TRUE, label=histogram_100bins}
+ggplot(diamonds_sample, aes(x = carat)) +
+  geom_histogram(bins = 100, fill = "red", color = "white") +
+  theme_minimal() +
+  theme(text = element_text(size = 30)) +
+  labs(title = "", x = "Carat", y = "Count")
+```
+
+A histogram of diamond weight (carat), using 100 bins.
+
+:::
+
+:::
+
+## How about a linear regression?
+
+\
+
+The regression equation:
+
+\
+
+$Y_{\text{price}} = \beta_0 + \beta_1 X_{\text{carat}} + \beta_2 X_{\text{cut}} + \\ \beta_3 X_{\text{depth}} + \beta_4 X_{\text{x}} + \beta_5 X_{\text{y}} + \beta_6 X_{\text{z}}$
+
+## R code for the regression
+
+\
+
+```{r eval=FALSE, echo=TRUE}
+# load diamonds dataset
+library(ggplot2)
+data(diamonds)
+
+# randomly sample 5000 diamonds
+set.seed(42)
+diamonds_sample <- diamonds[sample(nrow(diamonds), 5000),
+                            c("carat", "cut", "depth", "x",
+                              "y", "z", "price")]
+
+# fit a linear regression model
+model <- lm(price ~ carat + cut + depth + x + y + z,
+            data = diamonds_sample)
+summary(model)
+```
+
+The dataset used in this analysis is included in the `ggplot2` package [@ggplot2].
+
+## References
+
+::: {#refs}
+
+:::
+
