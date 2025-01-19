@@ -1,6 +1,3 @@
----
-bibliography: docs/references.bib
----
 
 # Research compendium of a simulation example based on @boulesteix_introduction_2020
 
@@ -17,9 +14,10 @@ November 2024
 
 ### Description
 
-This research compendium includes a simulation example based on the paper ['Introduction to statistical simulations in health research'](https://bmjopen.bmj.com/content/10/12/e039921) by @boulesteix_introduction_2020.
-The compendium includes a reproducible manuscript and the files required to reproduce the simulation example provided in the original paper.
+This research compendium includes a simulation example based on the paper ['Introduction to statistical simulations in health research'](https://bmjopen.bmj.com/content/10/12/e039921) by Boulesteix et al. (2020)[^1]. The compendium includes a reproducible manuscript and the files required to reproduce the simulation example provided in the original paper.
 
+[^1]: Boulesteix, Anne-Laure, Rolf HH Groenwold, Michal Abrahamowicz, Harald Binder, Matthias Briel, Roman Hornung, Tim P Morris, Jörg Rahnenführer, and Willi Sauerbrei. 2020. “Introduction to Statistical Simulations in Health Research.” BMJ Open 10 (12): e039921.
+https://doi.org/10.1136/bmjopen-2020-039921.
 
 ### Content Overview:
 
@@ -45,9 +43,3 @@ This compendium is licensed under the [MIT License](#License.md)
 The original paper by @@boulesteix_introduction_2020 is distributed under the Creative Commons Attribution Non Commercial (CC BY-NC 4.0) license,
 which permits others to distribute, remix, adapt, and build upon the work non-commercially, provided appropriate credit is given, changes are indicated, and the use remains non-commercial.
 For more information, see: <http://creativecommons.org/licenses/by-nc/4.0/>.
-
-
-## References
-
-:::{#refs}
-:::
