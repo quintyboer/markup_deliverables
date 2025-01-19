@@ -1,5 +1,5 @@
 
-# Research compendium of a simulation example based on @boulesteix_introduction_2020
+# Research compendium of a simulation example based on Boulesteix et al. (2020)
 
 <!-- badges: start -->
 <!-- badges: end -->
