@@ -6,3 +6,6 @@ Deliverable 3: Reusable `R` code wrapped in an `R` package or `Shiny` app.
 - If `Shiny app`, link the app on a `Shiny` server and your development repository (on GitHub).
 
 See course manual for requirements.
+
+
+For the created `R` package `travelspeed`, please refer to the [Github repository](https://github.com/quintyboer/travelspeed).
