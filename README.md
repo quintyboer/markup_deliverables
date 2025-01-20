@@ -2,8 +2,6 @@
 
 Deliverables for Markup languages and reproducible programming in statistics (202000010).
 
-Use this template to create your own repository, fill the contents of the repo with exercises and deliverables, then download the zip archive to hand in.
+This repository includes all the weekly exercises and (links to) deliverables for the course.
 
-
-
-<https://quintyboer.github.io>
+My portfolio is deployed on <https://quintyboer.github.io>
